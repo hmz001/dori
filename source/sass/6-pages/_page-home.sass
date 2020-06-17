@@ -1,18 +1,28 @@
 #header
-  background: url("../img/background@2x.jpg") no-repeat
+  background: url("../img/banner-full1@2x.png") no-repeat
   height: 800px
   background-size: cover
   text-align: center
   text-transform: uppercase
   color: #9381de
-  margin-bottom: 10em
+  // margin-bottom: 0em
+  position: relative
+
   .wrapper
-    max-width: 100%
+    width: 100%
+    max-width: none
+
   // overflow: hidden
 
 
   h1
-    color: #b67df0
+    color: #ffffff
+    position: absolute
+    top: 30%
+    margin: 0
+    max-width: 50%
+    font-size: 3em
+    text-align: left
   article
     width: 80%
     margin: 0 auto
@@ -20,26 +30,29 @@
 
     img
       // background-color: red
-      width: 40%
-      float: right
+      position: absolute
+      top: 25%
+      right: 5%
+      max-width: 25%
 
 
+@media screen and (max-width: 700px)
+  #header
+    display: table
+    position: static
+    margin-bottom: 2em
+    height: 600px
 
+    .banner-info
+      h1
+        display: block
+        margin: auto auto
+        position: static
+        text-align: center
+        margin-top: 3em
+        max-width: 95%
 
-#brands ul
-  text-align: center
-  padding: 20px 0
-  background: #ffffff
-  //border-bottom: 1px solid rgba(0,0,0,0.5)
-  display: grid
-  grid-template-columns: repeat(6, auto)
-  margin: 0
-
-  @media (max-width: 550px)
-    grid-template-columns: repeat(3, auto)
-
-
-  li
-    list-style: none
-  li img
-    //width: 80%
+      img
+        position: static
+        max-width: 80%
+        display: inline-block

@@ -1,33 +1,35 @@
 #features
-  background: #f9f9f9
+  background: #ffffff
   text-align: center
   position: relative
-  // margin-bottom: 10em
-  // &:after
-  //   bottom: 0
-  //   position: absolute
-  //   background: inherit
-  //   content: " "
-  //   height: 100%
-  //   left: 0
-  //   right: 0
-  //   transform: skewY(-5deg)
-  //   transform-origin: 100%
-  //   z-index: -1
+  padding: 2px
+  margin: 5px
+  .wrapper
+    max-width: 90%
   h2
     margin: 80px 0
   .cards
     display: grid
     grid-template-columns: repeat(2, auto)
-    grid-gap: 10px
+    justify-content: center
+    grid-gap: 0px
     margin-bottom: 50px
+    //background-color: yellow
     .feature-card
       background: #ffffff
-      // padding: 5px
-      padding: 5px 5px 5px 5px
-      box-shadow: 0 12px 10px -10px rgba(0,0,0,0.2)
-      // .small-img
-      //   max-width: 30%
-
+      padding: 0
+      border: 1px solid rgba(237,235,230,0.9)
+      margin-bottom: 5px
+      //5px 5px 5px 5px
+      box-shadow: 7px 1px 22px -4px rgba(0,0,0,0.45)
       img
         width: 100%
+
+      // @media screen and (max-width: 750px)
+      //   .cards
+      //     grid-template-columns: repeat(1, auto)
+
+  @media screen and (max-width: 700px)
+    //background-color: red
+    .cards
+      grid-template-columns: repeat(1, auto)

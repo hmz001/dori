@@ -2,19 +2,15 @@
   display: flex
   margin-top: 0
   background-color: #ffffff
+  height: 120px
 
   .logo
-    width: 100px
-    height: 100px
-    box-shadow: 2px -2px #eaeaea
+    width: 150px
+    height: 150px
+    position: absolute
+    box-shadow: 0 0 #eaeaea
     border-radius: 50%
     border: 1px solid #eaeaea
-
-  .nav-social
-    display: flex
-  .logo
-    width: 100px
-    height: 100px
 
   li
     list-style: none
@@ -22,28 +18,76 @@
   li:first-child
       margin-right: auto
   a
-    color: #88b1f2
+    color: #000000
     text-decoration: none
     display: block
-    padding: 15px 30px
-    border-radius: 4px
-    font-weight: 900
+    padding: 15px 15px
+    border-radius: 2px
+    font-size: 11px
+    font-weight: 600
     text-transform: uppercase
 
+  a:hover
+    font-weight: 900
+    border-bottom: 4px solid green
+
   .partner
-    background-color: #ebeef2
-    color: #6880d4
+    background-color: #00b32d
+    color: #ffffff
     box-shadow: 0 12px 10px -10px rgba(0,0,0,0.3)
+
   .nav-responsive
     display: inherit
+    margin: auto
+    white-space: nowrap
+
+  .nav-social
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    padding-top: 2%
+    margin-left: 10%
+    a
+      // background-color: red
+      //width: 7px
+      margin: 0 1px 0 1px
+      padding: 5px
+      vertical-align: bottom
+
+    // .fa:before
+    //   background-color: yellow
+    //   padding: 0
+    //   margin: 0
+    //   max-width: 4px
 
   .nav-toggle
     display: none
     padding-top: 10px
     z-index: 200
+    //float: right
+    //position: fixed
+    right: 0
 
-@media screen and (max-width: 650px)
+// @media screen and (max-width: 1000px)
+//   .main-nav
+//     //background-color: yellow
+//     .logo
+//       width: 125px
+//       height: 125px
+//
+//     a
+//       font-size: 11px
+
+@media screen and (max-width: 750px)
   .main-nav
+    position: block
+
+    .logo
+      width: 90px
+      height: 90px
+      // position: relative
+      // margin-left: auto
+      // margin-right: auto
+
     .nav-responsive
       display: none
     .nav-toggle
@@ -55,7 +99,7 @@
       position: absolute
       top: 0
       right: 0
-      background-color: wheat
+      background-color: #2dbe52
       color: black
       z-index: 100
 
