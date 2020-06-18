@@ -482,19 +482,17 @@ hr {
       white-space: nowrap;
       cursor: pointer;
       box-sizing: border-box;
-      max-width: 220px; }
+      width: 200px; }
       #download .buttons .download-button .btn-text {
         text-align: left; }
       #download .buttons .download-button .icon {
         float: left;
         width: 40px;
         height: 40px; }
-      #download .buttons .download-button .google {
-        background: url("../img/google.ico") no-repeat;
-        background-size: cover; }
-      #download .buttons .download-button .apple {
-        background: url("../img/apple.ico") no-repeat;
-        background-size: cover; }
+      #download .buttons .download-button .google::before {
+        content: url("../img/32/gplay.png"); }
+      #download .buttons .download-button .apple::before {
+        content: url("../img/32/apple-icon.png"); }
       #download .buttons .download-button h6 {
         color: white;
         padding: 0;
@@ -605,6 +603,9 @@ hr {
   #header .wrapper {
     width: 100%;
     max-width: none; }
+  @media only screen and (max-width: 700px) {
+    #header {
+      background: red; } }
   #header h1 {
     color: #ffffff;
     position: absolute;
@@ -621,21 +622,3 @@ hr {
       top: 25%;
       right: 5%;
       max-width: 25%; }
-
-@media screen and (max-width: 700px) {
-  #header {
-    display: table;
-    position: static;
-    margin-bottom: 2em;
-    height: 600px; }
-    #header .banner-info h1 {
-      display: block;
-      margin: auto auto;
-      position: static;
-      text-align: center;
-      margin-top: 3em;
-      max-width: 95%; }
-    #header .banner-info img {
-      position: static;
-      max-width: 80%;
-      display: inline-block; } }
